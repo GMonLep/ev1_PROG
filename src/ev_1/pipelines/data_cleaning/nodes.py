@@ -12,32 +12,24 @@ def clean_consultas(consultas: pd.DataFrame) -> pd.DataFrame:
 
     df = df.drop_duplicates()
 
-    # -------------------------
-    # 2. Handle missing values
-    # -------------------------
+    #valores no conocidos 
     for col in df.columns:
         if df[col].dtype == "object":
             df[col] = df[col].fillna("unknown")
         else:
             df[col] = df[col].fillna(df[col].median())
 
-    # -------------------------
-    # 3. Fix mixed data types
-    # -------------------------
+    #tipo de dato mezclado
     if "edad" in df.columns:
         df["edad"] = pd.to_numeric(df["edad"], errors="coerce")
 
-    # -------------------------
-    # 4. Standardize date formats
-    # -------------------------
+    #formato de fecha
     if "fecha_consulta" in df.columns:
         df["fecha_consulta"] = pd.to_datetime(
             df["fecha_consulta"], errors="coerce"
         )
 
-    # -------------------------
-    # 5. Normalize strings
-    # -------------------------
+    #strings normalizadoss
     for col in df.select_dtypes(include="object").columns:
         df[col] = (
             df[col]

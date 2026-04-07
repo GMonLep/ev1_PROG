@@ -7,7 +7,8 @@ import numpy as np
 from io import StringIO
 
 def explore_datasets(consultas, examenes, medicamentos, pacientes):
-
+    
+    #exploracion inicial
     datasets = {
         "consultas": consultas,
         "examenes": examenes,

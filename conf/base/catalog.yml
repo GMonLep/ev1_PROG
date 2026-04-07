@@ -32,3 +32,11 @@ medicamentos_limpio:
 pacientes_limpio: 
   type: pandas.CSVDataset
   filepath: data/02_intermediate/pacientes_limpio.csv
+
+##03_primary DATOS TRANSFORMADOS 
+
+dataset_integrado:
+  type: pandas.CSVDataset
+  filepath: data/03_primary/dataset_integrado.csv
+
+##04_feature DATOS VALIDADOS
