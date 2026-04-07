@@ -39,4 +39,7 @@ dataset_integrado:
   type: pandas.CSVDataset
   filepath: data/03_primary/dataset_integrado.csv
 
-##04_feature DATOS VALIDADOS
+##08_reportinbg REPORTES
+validation_report:
+  type: pandas.CSVDataset
+  filepath: data/08_reporting/validation_report.csv
