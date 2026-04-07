@@ -1,4 +1,34 @@
-# Here you can define all your datasets by using simple YAML syntax.
-#
-# Documentation for this file format can be found in "The Data Catalog"
-# Link: https://docs.kedro.org/en/stable/catalog-data/introduction/#data-catalog
+##01_raw CARGA ARCHIVOS ORIGINALES
+consultas: 
+  type: pandas.CSVDataset
+  filepath: data/01_raw/consultas.csv
+
+examenes: 
+  type: pandas.CSVDataset
+  filepath: data/01_raw/examenes.csv
+
+medicamentos: 
+  type: pandas.CSVDataset
+  filepath: data/01_raw/medicamentos.csv
+
+pacientes: 
+  type: pandas.CSVDataset
+  filepath: data/01_raw/pacientes.csv
+
+##02_intermediate DATOS LIMPIOS
+
+consultas_limpio: 
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/consultas_limpio.csv
+
+examenes_limpio: 
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/examenes_limpio.csv
+
+medicamentos_limpio: 
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/medicamentos_limpio.csv
+
+pacientes_limpio: 
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/pacientes_limpio.csv
